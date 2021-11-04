@@ -1,0 +1,59 @@
+<html>
+<body>
+<textarea rows="28" cols="110"><html><html>
+<head>
+<title>
+Chlopy i samolot
+</title>
+<script language="JavaScript">
+
+function wysokosc_krol(a_krol,b_krol)
+{
+a_krol=parseFloat(a_krol);
+b_krol=parseFloat(b_krol);
+
+wynik = Math.sqrt(b_krol * b_krol - a_krol * a_krol );
+document.getElementsByName('wysokosc')[0].value=wynik.toFixed(2); /* na dokument */
+wyprowadz_wys_krol.innerHTML="Wysokosc="+wynik.toFixed(2)+" m"+"<br>"; /* do tabeli */
+}
+
+
+function alfa_krol(a_krol,b_krol)
+{
+a_krol=parseFloat(a_krol);
+b_krol=parseFloat(b_krol);
+
+rady = Math.asin(a_krol / b_krol);
+wynik = rady * (180/Math.PI);
+
+document.getElementsByName('alfa')[0].value=wynik.toFixed(2); /* na dokument */
+wyprowadz_alfe_krol.innerHTML="Stopnie="+wynik.toFixed(2)+" °"+"<br>"; /* do tabeli */
+}
+
+</script>
+</head>
+<body>
+<form name="formularz" action="..." onsubmit="wysokosc_krol(this.a_dana_krol.value,this.b_dana_krol.value); alfa_krol(this.a_dana_krol.value,this.b_dana_krol.value);return false">
+Podaj odleglosc=
+<input size="6" name="a_dana_krol">
+Podaj droge=
+<input size="6" name="b_dana_krol">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Wysokosc =
+<input size="6" name="wysokosc">
+Kat startu=
+<input size="6" name="alfa">
+</form>
+<table>
+<tr id="wyprowadz_wys_krol"></tr> 
+<tr id="wyprowadz_alfe_krol"></tr> 
+</table>
+</body>
+</html>
+</textarea>
+</html>
+</body>                                                                                                  
