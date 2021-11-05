@@ -10,25 +10,25 @@ Pola prostokatow
 
 function Pole_krol(a_krol,b_krol)
 {
-a_wlod=parseFloat(a_krol);
-b_wlod=parseFloat(b_krol);
+a_krol=parseFloat(a_krol);
+b_krol=parseFloat(b_krol);
 
 wynik = a_krol * b_krol;
 document.getElementsByName('pole')[0].value=wynik.toFixed(2); /* na dokument */
 alert("Pole="+wynik.toFixed(2)+" cm2"); /*do okna Alert */
-wyprowadz_pole_wlod.innerHTML="Pole="+wynik.toFixed(2)+" cm2"+"<br>"; /* do tabeli */
+wyprowadz_pole_krol.innerHTML="Pole="+wynik.toFixed(2)+" cm2"+"<br>"; /* do tabeli */
 }
 
 
 function obwod_krol(a_krol,b_krol)
 {
-a_wlod=parseFloat(a_krol);
-b_wlod=parseFloat(b_wlod);
+a_krol=parseFloat(a_krol);
+b_krol=parseFloat(b_krol);
 
 wynik = a_krol * 2 + b_krol * 2;
 document.getElementsByName('obw')[0].value=wynik.toFixed(2); /* na dokument */
 alert("Obwod="+wynik.toFixed(2)+" cm"); /*do okna Alert */
-wyprowadz_obwod_wlod.innerHTML="Obwod="+wynik.toFixed(2)+" cm"+"<br>"; /* do tabeli */
+wyprowadz_obwod_krol.innerHTML="Obwod="+wynik.toFixed(2)+" cm"+"<br>"; /* do tabeli */
 }
 </script>
 </head>
